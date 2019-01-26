@@ -11,8 +11,8 @@
                 <span class="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item" id="products">
-              <a class="nav-link" href="${contextRoot}/listProducts">Products</a>
+            <li class="nav-item" id="listProducts">
+              <a class="nav-link" href="${contextRoot}/show/all/products">Products</a>
             </li>
           </ul>
         </div>

@@ -239,3 +239,9 @@ input:checked + .slider:before {
   color: white;
 }
 
+.list-group-item.active{z-index:2;color:#fff;background-color:#77815C;border-color:#77815C}
+
+a{
+	color: #003427;
+}
+

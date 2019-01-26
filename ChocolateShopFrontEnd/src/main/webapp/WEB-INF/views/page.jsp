@@ -24,6 +24,7 @@
 
 <script>
 	window.menu = '${title}';
+	window.category_id = '${category.id}';
 </script>
 
 <!-- Bootstrap core CSS -->
@@ -49,12 +50,18 @@
 
 		<!-- Page Content -->
 		<div class="content">
-			
+
+			<!-- Loading the home content -->
 			<c:if test="${userClicksHome == true}">
-				<!-- Loading home content -->
 				<%@include file="home.jsp"%>
 			</c:if>
-		
+
+			<!-- loading products -->
+			<c:if
+				test="${userClicksAllProducts == true or userClicksCategoryProducts == true }">
+				<%@include file="listProducts.jsp"%>
+			</c:if>
+
 		</div>
 		<!-- /.container -->
 

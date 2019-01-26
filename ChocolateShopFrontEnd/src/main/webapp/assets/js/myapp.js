@@ -36,7 +36,7 @@ $(function() {
 		if (menu == "Home")
 			break;
 		$('#listProducts').addClass('active');
-		$('#a_' + menu).addClass('active');
+		$('#a_' + category_id).addClass('active');
 		break;
 	}
 
