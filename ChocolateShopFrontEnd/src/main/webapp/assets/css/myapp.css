@@ -301,7 +301,10 @@ table.dataTable thead .sorting:after {
 	content:"";
 }
 
-
+/* Custom errors */
+.jumbotron{
+	background-color: white;
+}
 
 
 
