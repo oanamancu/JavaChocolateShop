@@ -17,24 +17,31 @@
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="">
-<meta name="author" content="">
+<meta name="description" content="chocolate shop java spring">
+<meta name="author" content=" Mancu Oana">
 
 <title>ChocolateShop - ${title}</title>
 
 <script>
 	window.menu = '${title}';
-	window.category_id = '${category.id}';
+	window.contextRoot = '${contextRoot}';
 </script>
 
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
 
+<!-- Bootstrap readable Theme -->
+<link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
+
 <!-- Custom styles for this template -->
 <link href="${css}/shop-homepage.css" rel="stylesheet">
 
-<!-- Bootstrap readable Theme -->
-<link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
+<link href="${css}/dataTable.min.css" rel="stylesheet">
+<!-- Bootstrap DataTables Theme -->
+<link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
+
+<!-- Fontawesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
 <!-- Custom CSS -->
 <link href="${css}/myapp.css" rel="stylesheet">
@@ -42,7 +49,7 @@
 </head>
 
 <body>
-
+    <div class="se-pre-con"></div>
 	<div class="wrapper">
 
 		<!-- Navigation -->
@@ -61,20 +68,32 @@
 				test="${userClicksAllProducts == true or userClicksCategoryProducts == true }">
 				<%@include file="listProducts.jsp"%>
 			</c:if>
+			
+			<!-- Product details -->
+			<c:if test="${userClicksShowProduct == true}">
+			    <%@include file="singleProduct.jsp" %>
+			</c:if>
 
 		</div>
 		<!-- /.container -->
 
 		<!-- Footer -->
 		<%@include file="./shared/footer.jsp"%>
-
-		<!-- Bootstrap core JavaScript -->
-		<script src="${js}/jquery.min.js"></script>
-		<script src="${js}/bootstrap.bundle.min.js"></script>
+		
 		<!-- jQuery -->
+		<script src="${js}/jquery.min.js"></script> 
+		<script src="${js}/bootstrap.bundle.min.js"></script>
 		<script src="${js}/jquery.js"></script>
-
-
+		
+		<!-- Bootstrap Core JavaScript -->
+		<script src="${js}/bootstrap.min.js"></script>
+		
+        <!-- DataTable Plug in -->
+        <script src="${js}/jquery.dataTables.js"></script> 
+        
+        <!-- DataTable Bootstrap Script -->
+        <script src="${js}/dataTables.bootstrap.js"></script> 
+         
 		<!-- Self coded JavaScript -->
 		<script src="${js}/myapp.js"></script>
 

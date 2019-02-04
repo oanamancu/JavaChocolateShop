@@ -33,14 +33,18 @@ public class Product implements Serializable {
 	private String name;
 	@NotBlank(message = "Please enter an image!")
 	private String image;
-	@NotBlank(message = "Please enter the description!")
+	@JsonIgnore
 	private String description;
 	@Column(name = "unit_price")
 	@Min(value = 1, message = "Please select at least one value!")
 	private double unitPrice;
+	@JsonIgnore
 	private double weight;
+	@JsonIgnore
 	private String dimensions;
+	@JsonIgnore
 	private String ingredients;
+	@JsonIgnore
 	@Column(name = "is_active")
 	private boolean active;
 	@Column(name = "category_id")
@@ -155,7 +159,7 @@ public class Product implements Serializable {
 		this.views = views;
 	}
 	
-
+    @JsonIgnore
 	@Transient
 	private MultipartFile file;
 
