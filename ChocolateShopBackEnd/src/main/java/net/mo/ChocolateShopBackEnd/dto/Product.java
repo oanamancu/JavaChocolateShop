@@ -9,8 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Transient;
-
-import javax.validation.constraints.Min;
+import javax.validation.constraints.DecimalMin;
 
 import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.stereotype.Component;
@@ -31,12 +30,12 @@ public class Product implements Serializable {
 	private String code;
 	@NotBlank(message = "Please enter the product name!")
 	private String name;
-	@NotBlank(message = "Please enter an image!")
+	//@NotBlank(message = "Please enter an image!")
 	private String image;
 	@JsonIgnore
 	private String description;
 	@Column(name = "unit_price")
-	@Min(value = 1, message = "Please select at least one value!")
+	@DecimalMin(value="0.01", message="Please select a value greater than 0!")
 	private double unitPrice;
 	@JsonIgnore
 	private double weight;
@@ -54,7 +53,6 @@ public class Product implements Serializable {
 	private int views;
 
 	// setters and getters
-
 	public int getId() {
 		return id;
 	}

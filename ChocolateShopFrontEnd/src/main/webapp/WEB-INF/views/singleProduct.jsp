@@ -24,25 +24,33 @@
 		<div class="col-xs-12 col-sm-8">
 			<h3>${product.name}</h3>
 			<hr />
-			<p>${product.description}</p>
-			<hr />
+			<c:if test="${product.description != null}">
+				<p>${product.description}</p>
+				<hr />
+			</c:if>
 			<h4>$${product.unitPrice}</h4>
 			<hr />
-			<h6>
-				<strong>Weight:</strong> ${product.weight}
-			</h6>
-			<hr />
-			<h6>
-				<strong>Dimensions:</strong> ${product.dimensions}
-			</h6>
-			<hr />
-			<h6>
-				<strong>Ingredients:</strong> ${product.ingredients}
-			</h6>
+			<c:if test="${product.weight != 0}">
+				<h6>
+					<strong>Weight:</strong> ${product.weight}
+				</h6>
+				<hr />
+			</c:if>
+			<c:if test="${product.dimensions != null}">
+				<h6>
+					<strong>Dimensions:</strong> ${product.dimensions}
+				</h6>
+				<hr />
+			</c:if>
+			<c:if test="${product.ingredients != null}">
+				<h6>
+					<strong>Ingredients:</strong> ${product.ingredients}
+				</h6>
+			</c:if>
 			<br /> <a href="${contextRoot}/cart/add/${product.id}/product"
 				class="btn btn-success"> <i class="fas fa-cart-arrow-down"></i>Add
 				to Cart
-			</a> <a href="${contextRoot}/show/all/products" class="btn btn-success">Back</a>
+			</a> <a href="${contextRoot}/show/all/products" class="btn btn-primary">Back</a>
 		</div>
 	</div>
 </div>

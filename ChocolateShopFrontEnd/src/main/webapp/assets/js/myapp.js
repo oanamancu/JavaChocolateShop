@@ -25,8 +25,8 @@ $(function() {
 	case 'All Products':
 		$('#listProducts').addClass('active');
 		break;
-	case 'Product Management':
-		$('#manageProduct').addClass('active');
+	case 'Products Management':
+		$('#manageProducts').addClass('active');
 		break;
 	case 'Shopping Cart':
 		$('#userModel').addClass('active');
