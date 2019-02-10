@@ -90,6 +90,9 @@
 		<script src="${js}/bootstrap.bundle.min.js"></script>
 		<script src="${js}/jquery.js"></script>
 		
+		<!-- jQuery validator -->
+		<script src="${js}/jquery.validate.js" ></script>
+		
 		<!-- Bootstrap Core JavaScript -->
 		<script src="${js}/bootstrap.min.js"></script>
 		
@@ -98,8 +101,11 @@
         
         <!-- DataTable Bootstrap Script -->
         <script src="${js}/dataTables.bootstrap.js"></script> 
-         
-		<!-- Self coded JavaScript -->
+        
+        <!-- Bootbox -->
+		<script src="${js}/bootbox.min.js"></script>
+       
+        <!-- Self coded JavaScript -->
 		<script src="${js}/myapp.js"></script>
 
 	</div>

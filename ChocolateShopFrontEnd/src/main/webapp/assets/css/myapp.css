@@ -129,7 +129,7 @@ footer {
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: seagreen;
 }
 
 input:focus + .slider {
@@ -259,7 +259,7 @@ a.list-group-item.active:hover {
 }
 
 /* products table */
-#productListTable_wrapper .row{
+#productListTable_wrapper .row , #adminProductsTable_wrapper .row{
 	width: 100% !important;
 }
 
@@ -305,5 +305,39 @@ table.dataTable thead .sorting:after {
 .jumbotron{
 	background-color: white;
 }
+
+.adminDataTableImg{
+	height: 50px;
+	width: 50px; 
+}
+
+.fade.in {
+  opacity: 1;
+}
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.modal-backdrop.in {
+  opacity: 0.5;
+}
+
+/* modal header*/
+ .modal-header h4 {
+    order: 0;
+}
+.modal-header button {
+    order: 1;
+}
+
+/* Migrating to Bootstrap 4 */
+.btn-group-xs > .btn, .btn-xs {
+  padding  : .25rem .4rem;
+  font-size  : .875rem;
+  line-height  : .5;
+  border-radius : .2rem;
+}
+
 
 

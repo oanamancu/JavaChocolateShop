@@ -30,7 +30,6 @@ public class Product implements Serializable {
 	private String code;
 	@NotBlank(message = "Please enter the product name!")
 	private String name;
-	//@NotBlank(message = "Please enter an image!")
 	private String image;
 	@JsonIgnore
 	private String description;
@@ -43,7 +42,6 @@ public class Product implements Serializable {
 	private String dimensions;
 	@JsonIgnore
 	private String ingredients;
-	@JsonIgnore
 	@Column(name = "is_active")
 	private boolean active;
 	@Column(name = "category_id")
