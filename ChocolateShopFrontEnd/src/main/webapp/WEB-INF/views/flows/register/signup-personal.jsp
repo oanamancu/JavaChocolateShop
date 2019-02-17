@@ -3,7 +3,7 @@
 <div class="container">
 
 
-	<div class="row">
+	<div class="row" style="padding-bottom: 70px;">
 
 		<div class="col-md-6 col-md-offset-3" style="margin-right: auto; margin-left: auto;">
 

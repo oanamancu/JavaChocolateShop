@@ -3,6 +3,7 @@ package net.mo.ChocolateShopFrontEnd.handler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.binding.message.MessageBuilder;
 import org.springframework.binding.message.MessageContext;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import net.mo.ChocolateShopBackEnd.dao.UserDAO;
@@ -16,6 +17,9 @@ public class RegisterHandler {
 	
 	@Autowired
 	private UserDAO userDAO;
+	
+	@Autowired
+	private BCryptPasswordEncoder passwordEncoder;
       
 	 public RegisterModel init() {	 
 		 return new RegisterModel();
@@ -68,6 +72,10 @@ public class RegisterHandler {
 			 cart.setUser(user);
 			 user.setCart(cart);
 		 }
+		 
+		 //encoding the password
+		 user.setPassword(passwordEncoder.encode(user.getPassword()));
+		 
 		 //save the user
 		 userDAO.add(user);
 		 

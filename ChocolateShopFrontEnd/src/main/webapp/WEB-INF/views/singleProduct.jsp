@@ -47,10 +47,19 @@
 					<strong>Ingredients:</strong> ${product.ingredients}
 				</h6>
 			</c:if>
-			<br /> <a href="${contextRoot}/cart/add/${product.id}/product"
+			<br /> 
+			<security:authorize access="hasAuthority('USER')"> 
+			<a href="${contextRoot}/cart/add/${product.id}/product"
 				class="btn btn-success"> <i class="fas fa-cart-arrow-down"></i>Add
 				to Cart
-			</a> <a href="${contextRoot}/show/all/products" class="btn btn-primary">Back</a>
+			</a> 
+			</security:authorize>
+			<security:authorize access="hasAuthority('ADMIN')">
+			<a href="${contextRoot}/manage/${product.id}/product"
+				class="btn btn-success"><i class="fas fa-marker" style="margin-right: 5px;"></i> Edit
+			</a> 
+			</security:authorize>
+			<a href="${contextRoot}/show/all/products" class="btn btn-primary">Back</a>
 		</div>
 	</div>
 </div>

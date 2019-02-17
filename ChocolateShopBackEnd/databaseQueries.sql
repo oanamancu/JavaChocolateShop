@@ -19,7 +19,7 @@ CREATE TABLE user_detail(
      last_name VARCHAR(50),
      role VARCHAR(50),
      enabled BOOLEAN,
-     password VARCHAR(50),
+     password VARCHAR(60),
      email VARCHAR(100),
      contact_number VARCHAR(15),
      CONSTRAINT pk_user_id PRIMARY KEY(id)
@@ -27,15 +27,15 @@ CREATE TABLE user_detail(
 
 INSERT INTO user_detail
 (first_name, last_name, role, enabled, password, email, contact_number)
-VALUES('Oana', 'Mancu', 'ADMIN', true, 'admin', 'mo@gmail.com', '0000000000');
+VALUES('Oana', 'Mancu', 'ADMIN', true, '$2a$10$hFuj6c8wRxK/PWLGuot4S.N.qON/A2MqU1KRILrS4iEk0dFjKIy/i', 'mo@gmail.com', '0000000000');
 
 INSERT INTO user_detail
 (first_name, last_name, role, enabled, password, email, contact_number)
-VALUES('One', 'First', 'ADMIN', true, '12345', 'of1@gmail.com','1111111111');
+VALUES('One', 'First', 'USER', true, '$2a$10$SB6xApRC3mhUpf3fTUWPhOuo3dxZu45FiMmVjJBsH4lQ3JGxNfTxC', 'of1@gmail.com','1111111111');
 
 INSERT INTO user_detail
 (first_name, last_name, role, enabled, password, email, contact_number)
-VALUES('Two', 'Second', 'ADMIN', true, '12345', 'ts2@gmail.com', '2222222222');
+VALUES('Two', 'Second', 'SUPPLIER', true, '	$2a$10$l/kVWBPS5VDQ3jxBCmdBYOAm4IHVk2EBB0jA.v6a1oPpP/c/wkba.', 'ts2@gmail.com', '2222222222');
 
 
 CREATE TABLE product(

@@ -45,7 +45,7 @@
 								<label class="col-sm-3 col-form-label" for="categoryId">
 									<b>Category:</b>
 								</label>
-								<div class="col-md-5" style="padding-left: 4px;">
+								<div class="col-sm-3" style="padding-left: 4px;">
 									<sf:select class="form-controler form-control"
 										style="width: 348px;" id="categoryId" path="categoryId"
 										items="${categories}" itemLabel="name" itemValue="id" />
@@ -151,33 +151,35 @@
 		<div class="col-xs-12" style="width: 100%;">
 			<h3>Available Products</h3>
 		</div>
-		<div class="col-xs-12 row" style="overflow: auto; width: 100%;">
-
-			<!-- Products table for Admin -->
-			<table id="adminProductsTable"
-				class="table stable-stripped table-bordered">
-				<thead>
-					<tr>
-						<th>Id</th>
-						<th>&#160;</th>
-						<th>Name</th>
-						<th>Price</th>
-						<th>Active</th>
-						<th>Edit</th>
-					</tr>
-				<thead>
-				<tfoot>
-					<tr>
-						<th>Id</th>
-						<th>&#160;</th>
-						<th>Name</th>
-						<th>Price</th>
-						<th>Active</th>
-						<th>Edit</th>
-					</tr>
-				</tfoot>
-			</table>
-
+		<div class="col-xs-12 row" style="width: 100%;">
+			<div class="container-fluid">
+				<div class="table-responsive">
+					<!-- Products table for Admin -->
+					<table id="adminProductsTable"
+						class="table stable-stripped table-bordered">
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>&#160;</th>
+								<th>Name</th>
+								<th>Price</th>
+								<th>Active</th>
+								<th>Edit</th>
+							</tr>
+						<thead>
+						<tfoot>
+							<tr>
+								<th>Id</th>
+								<th>&#160;</th>
+								<th>Name</th>
+								<th>Price</th>
+								<th>Active</th>
+								<th>Edit</th>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+			</div>
 		</div>
 
 	</div>
@@ -203,12 +205,14 @@
 							<label for="category_name" class="control-label col-md-4">Category
 								name</label>
 							<div class="col-md-8">
-								<sf:input type="text" path="name" id="category_name" class="form-control" />
+								<sf:input type="text" path="name" id="category_name"
+									class="form-control" />
 							</div>
 						</div>
 						<div class="form-group">
 							<div class="col-md-offset-4 col-md-8">
-								<input type="submit" value="Add Category" class="btn btn-primary"/>
+								<input type="submit" value="Add Category"
+									class="btn btn-primary" />
 							</div>
 						</div>
 					</sf:form>
