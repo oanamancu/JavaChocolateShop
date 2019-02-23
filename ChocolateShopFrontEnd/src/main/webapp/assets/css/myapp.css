@@ -365,3 +365,26 @@ table.dataTable thead .sorting:after {
 .table-responsive{
 	overflow-x: auto;
 }
+
+/* home */
+.imgLeft
+{
+    float: left;
+    width: 190px;
+    height: 200px;
+    margin: 0px 10px 10px 0;
+    padding: 10px;
+}
+
+.imgRight
+{
+    float: right;
+    width: 190px;
+    height: 200px;
+    margin: 0px 0 10px 10px;
+    padding: 10px;
+}
+
+.imgLeft:after , .imgRight:after {
+	clear: both;
+}
