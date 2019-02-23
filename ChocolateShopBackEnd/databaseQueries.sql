@@ -80,3 +80,23 @@ INSERT INTO product (code, name, image, description, unit_price, weight, dimensi
 VALUES ('PRDABCXYZDEFX', 'Chocolate Wood Box', 'pralines12.jpg', 
        'Not just tasty, also practical. You can refill it with chocolate as many times you like. Or, why not, use it as a jewellery or a tea bag box after the chocolate is over. ', 
         54, 0 , '30 x 30 x 7 cm', null, true, 3, 0, 0 );
+        
+        
+        
+-- cart tables & queries
+
+CREATE TABLE cart_line(
+     id IDENTITY,
+     cart_id int,
+     total DECIMAL(10,2),
+     product_id int,
+     product_count int,
+     buying_price DECIMAL(10,2),
+     CONSTRAINT fk_cartline_cart_id FOREIGN KEY (cart_id) REFERENCES cart (id),
+     CONSTRAINT fk_cartline_product_id FOREIGN KEY (product_id) REFERENCES product (id),
+     CONSTRAINT pk_cartline_id PRIMARY KEY (id)
+);        
+
+        
+        
+        

@@ -29,8 +29,8 @@ $(function() {
 	case 'Products Management':
 		$('#manageProducts').addClass('active');
 		break;
-	case 'Shopping Cart':
-		$('#userModel').addClass('active');
+	case 'User Cart':
+		$('#userCart').addClass('active');
 		break;
 	default:
 		$('#home').addClass("active");
@@ -307,25 +307,26 @@ $(function() {
 			}
 		});
 	}
-
+    
+	//handling the click event of the refresh cart button
 	$('button[name="refreshCart"]')
 			.click(
 					function() {
 						var cartLineId = $(this).attr('value');
 						var countField = $('#count_' + cartLineId);
 						var originalCount = countField.attr('value');
-						// do the checking only the count has changed
+						// do the checking only if the count has changed
 						if (countField.val() !== originalCount) {
 							// check if the quantity is within the specified
 							// range
-							if (countField.val() < 1 || countField.val() > 3) {
+							if (countField.val() < 1 || countField.val() > 10000) {
 								// set the field back to the original field
 								countField.val(originalCount);
 								bootbox
 										.alert({
 											size : 'medium',
 											title : 'Error',
-											message : 'Product Count should be minimum 1 and maximum 3!'
+											message : 'Product count should be minimum 1 and maximum 10000!'
 										});
 							} else {
 								// use the window.location.href property to send
@@ -333,6 +334,7 @@ $(function() {
 								var updateUrl = window.contextRoot + '/cart/'
 										+ cartLineId + '/update?count='
 										+ countField.val();
+								//forward it to the controller
 								window.location.href = updateUrl;
 							}
 						}

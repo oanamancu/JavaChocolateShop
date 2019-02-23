@@ -193,6 +193,15 @@ input:checked + .slider:before {
 	
 }
 
+#cart{
+	margin-top: 100px;
+}
+
+.cartImg{
+	width: 100px;
+	height: 100px;
+}
+
 
 /* cart checkout */
 .panel-title {display: inline;font-weight: bold;}

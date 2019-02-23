@@ -13,8 +13,6 @@ public interface UserDAO {
 	User get(int id);
     boolean add(User user);
 	
-	boolean updateCart(Cart cart);
-	
 	// adding and updating a new address
 	Address getAddress(int addressId);
 	boolean addAddress(Address address);
